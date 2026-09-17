@@ -10,10 +10,18 @@
 
     <p id="demo"></p>
 
-    <script>
-      let x = "";
+    <!-- <input type="text" id="userinput" placeholder="18" /> -->
 
-      document.getElementById("demo").innerHTML = typeof x;
+    <!-- <button onclick="findVoteable()">click me to find</button> -->
+
+    <script>
+      let isMember = false;
+      let price = 10;
+      let discount = isMember ? 0.2 : 0;
+
+      let total = price - price * discount;
+
+      document.getElementById("demo").innerHTML = total;
     </script>
   </body>
 </html>
