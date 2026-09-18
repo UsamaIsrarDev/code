@@ -15,13 +15,17 @@
     <!-- <button onclick="findVoteable()">click me to find</button> -->
 
     <script>
-      let isMember = false;
-      let price = 10;
-      let discount = isMember ? 0.2 : 0;
+      let cars = ["Audi", "BMW", "Ferrari", "Volvo", "Suzuki"];
+      let text = "";
 
-      let total = price - price * discount;
+      let i = 0;
 
-      document.getElementById("demo").innerHTML = total;
+      do {
+        text += "<br>The number is " + i;
+        i++;
+      } while (i < 10);
+
+      document.getElementById("demo").innerHTML = text;
     </script>
   </body>
 </html>
