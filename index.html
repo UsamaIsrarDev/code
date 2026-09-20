@@ -8,17 +8,25 @@
   <body>
     <h1>What can JavaScript do?</h1>
 
+    <img src="./kids.jpeg" alt="shoe" id="img" />
+
+    <button onclick="startSlides()">Show next</button>
+    <button onclick="stopSlides()">Stop</button>
+
     <p id="demo"></p>
 
-    <!-- <input type="text" id="userinput" placeholder="18" /> -->
-
-    <!-- <button onclick="findVoteable()">click me to find</button> -->
-
     <script>
-      let text1 = "Usama Hello! Israr Hello! Khan Hello!";
-      let text2 = text1.endsWith("Hello!", 10);
+      const fruits = {
+        Banana: 300,
+        Apple: 200,
+        Orange: 400,
+      };
 
-      document.getElementById("demo").innerHTML = text2;
+      let result;
+
+      result = JSON.stringify(fruits);
+
+      document.getElementById("demo").innerHTML = result;
     </script>
   </body>
 </html>
