@@ -8,25 +8,30 @@
   <body>
     <h1>What can JavaScript do?</h1>
 
-    <img src="./kids.jpeg" alt="shoe" id="img" />
-
-    <button onclick="startSlides()">Show next</button>
-    <button onclick="stopSlides()">Stop</button>
-
     <p id="demo"></p>
 
     <script>
-      const fruits = {
-        Banana: 300,
-        Apple: 200,
-        Orange: 400,
+      const myObj = {
+        name: "John",
+        age: 30,
+        cars: [
+          { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+          { name: "BMW", models: ["320", "X3", "X5"] },
+          { name: "Fiat", models: ["500", "Panda"] },
+        ],
       };
 
-      let result;
+      let x;
 
-      result = JSON.stringify(fruits);
+      for (let i in myObj.cars) {
+        x += "<h1>" + myObj.cars[i].name + "</h1>";
 
-      document.getElementById("demo").innerHTML = result;
+        for (let j in myObj.cars[i].models) {
+          x += myObj.cars[i].models[j] + "<br>";
+        }
+      }
+
+      document.getElementById("demo").innerHTML = x;
     </script>
   </body>
 </html>
