@@ -10,28 +10,42 @@
 
     <p id="demo"></p>
 
+    <p id="demo1"></p>
+
+    <button onclick="myRandomSort()">Try it</button>
+
     <script>
-      const myObj = {
-        name: "John",
-        age: 30,
-        cars: [
-          { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
-          { name: "BMW", models: ["320", "X3", "X5"] },
-          { name: "Fiat", models: ["500", "Panda"] },
-        ],
-      };
+      let fruits = ["Mango", "Apple", "Banana"];
 
-      let x;
+      fruits.sort();
 
-      for (let i in myObj.cars) {
-        x += "<h1>" + myObj.cars[i].name + "</h1>";
+      fruits.reverse();
 
-        for (let j in myObj.cars[i].models) {
-          x += myObj.cars[i].models[j] + "<br>";
+      let position = fruits.includes("Apple");
+
+      const muns = [56, 23, 67, 12, 87, 89, 23, 12, 34, 56, 1, 2, 45];
+
+      // muns.sort(function (a, b) {
+      //   return b - a;
+      // });
+
+      // document.getElementById("demo").innerHTML = fruits;
+
+      const months = ["Jan", "Feb", "Mar", "April", "May", "June"];
+
+      const monthsSort = months.toReversed();
+
+      function myRandomSort() {
+        for (let i = muns.length - 1; i > 0; i--) {
+          let j = Math.floor(Math.random() * (i + 1));
+          let k = muns[i];
+          muns[i] = muns[j];
+          muns[j] = k;
         }
+        document.getElementById("demo1").innerHTML = muns;
       }
 
-      document.getElementById("demo").innerHTML = x;
+      document.getElementById("demo1").innerHTML = muns;
     </script>
   </body>
 </html>
