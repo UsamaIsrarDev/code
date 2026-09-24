@@ -10,42 +10,30 @@
 
     <p id="demo"></p>
 
-    <p id="demo1"></p>
-
-    <button onclick="myRandomSort()">Try it</button>
-
     <script>
-      let fruits = ["Mango", "Apple", "Banana"];
+      const person = new WeakSet();
 
-      fruits.sort();
+      const John = { name: "John", age: 40 };
+      const Paul = { name: "Paul", age: 41 };
+      const Ringo = { name: "Ringo", age: 42 };
+      const George = { name: "George", age: 43 };
 
-      fruits.reverse();
+      let text = "";
 
-      let position = fruits.includes("Apple");
+      track(Paul);
+      track(Ringo);
+      track(Paul);
 
-      const muns = [56, 23, 67, 12, 87, 89, 23, 12, 34, 56, 1, 2, 45];
-
-      // muns.sort(function (a, b) {
-      //   return b - a;
-      // });
-
-      // document.getElementById("demo").innerHTML = fruits;
-
-      const months = ["Jan", "Feb", "Mar", "April", "May", "June"];
-
-      const monthsSort = months.toReversed();
-
-      function myRandomSort() {
-        for (let i = muns.length - 1; i > 0; i--) {
-          let j = Math.floor(Math.random() * (i + 1));
-          let k = muns[i];
-          muns[i] = muns[j];
-          muns[j] = k;
+      function track(visitor) {
+        if (person.has(visitor)) {
+          text += visitor.name + " visits again";
+        } else {
+          person.add(visitor);
+          text += visitor.name + " visit for the first time";
         }
-        document.getElementById("demo1").innerHTML = muns;
       }
 
-      document.getElementById("demo1").innerHTML = muns;
+      document.getElementById("demo").innerHTML = text;
     </script>
   </body>
 </html>
