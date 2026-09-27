@@ -1,42 +1,19 @@
 <!doctype html>
-<html lang="en">
+
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>This is the title of the page</title>
   </head>
+
   <body>
-    <h1>What can JavaScript do?</h1>
-
-    <p id="demo"></p>
-
-    <script>
-      function* generatorFunc() {
-        yield 1;
-        yield 2;
-
-        yield 3;
-      }
-
-      const myGenerator = generatorFunc();
-
-      let text = "";
-
-      for (let value of myGenerator) {
-        text += value + "<br>";
-      }
-
-      const myArr = [12, 15, 34, 56, 76, 86, 90, 45, 16, 37, 89, 67];
-
-      let user = parseInt(prompt("Entern number"));
-
-      if (myArr.includes(user)) {
-        console.log("Number is found!", user, "One this index", myArr[user]);
-      } else {
-        console.log("Number not found!");
-      }
-
-      document.getElementById("demo").innerHTML = text;
-    </script>
+    <h1>How to view the Source of this page?</h1>
+    <p>
+      If you right click on the page, you'll see an option that allows you to
+      see the source code behind a web page.
+    </p>
+    <p>
+      This is an easy way for the people to learn, how a web page has been
+      build.
+    </p>
   </body>
 </html>
