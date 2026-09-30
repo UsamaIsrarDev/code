@@ -15,5 +15,29 @@
       This is an easy way for the people to learn, how a web page has been
       build.
     </p>
+
+    <script>
+      const userValue = parseInt(
+        prompt("Find the factorial of that number which is in your mind!"),
+      );
+
+      let result;
+
+      if (userValue < 1) {
+        console.log("Invalid number");
+      } else if (userValue == 1) {
+        console.log("1 is not a prime number neother codinator");
+      } else {
+        for (let i = 2; i < userValue; i++) {
+          if (userValue % i == 0) {
+            result = `${userValue} is not prime number`;
+            break;
+          } else {
+            result = `${userValue} is prime number`;
+          }
+        }
+        console.log(result);
+      }
+    </script>
   </body>
 </html>
