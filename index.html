@@ -17,26 +17,36 @@
     </p>
 
     <script>
-      const userValue = parseInt(
-        prompt("Find the factorial of that number which is in your mind!"),
+      // let userValue = prompt(
+      //   "Find the factorial of that number which is in your mind!",
+      // );
+
+      // userValue = userValue.toLowerCase();
+
+      // const vowels = ["a", "e", "i", "o", "u"];
+
+      // let isVowel = vowels.includes(userValue);
+
+      // if (isVowel) {
+      //   console.log(`This alphabet ${userValue} is vowel`);
+      // } else {
+      //   console.log(`This alphabet ${userValue} is not vowel`);
+      // }
+
+      let userValue = prompt(
+        "Find the factorial of that number which is in your mind!",
       );
 
-      let result;
+      userValue = userValue.toLowerCase();
 
-      if (userValue < 1) {
-        console.log("Invalid number");
-      } else if (userValue == 1) {
-        console.log("1 is not a prime number neother codinator");
+      const vowels = ["a", "e", "i", "o", "u"];
+
+      const myObj = {};
+
+      if (isVowel) {
+        console.log(`This alphabet ${userValue} is vowel`);
       } else {
-        for (let i = 2; i < userValue; i++) {
-          if (userValue % i == 0) {
-            result = `${userValue} is not prime number`;
-            break;
-          } else {
-            result = `${userValue} is prime number`;
-          }
-        }
-        console.log(result);
+        console.log(`This alphabet ${userValue} is not vowel`);
       }
     </script>
   </body>
